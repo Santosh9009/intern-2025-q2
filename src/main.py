@@ -20,7 +20,7 @@ def generate_tweet(topic: str, tone: str, max_words: int) -> str:
     """
     # PROMPT ENGINEERING: Format prompt template with variables
     # Template: "Write a {tone} tweet about {topic} in under {max_words} words."
-    prompt = f"Write a {tone} tweet about {topic} in under {max_words} words."
+    prompt = f"Write a single {tone} tweet about {topic} in exactly under {max_words} words. Return only the tweet text without any explanations, options, or additional formatting."
     
     try:
         print(f"Sending request to LLM model --> {env('GEMINI_MODEL')}")
